@@ -1,0 +1,242 @@
+/* styles.css */
+body {
+  background-color: #013220; /* Dark green, low brightness */
+  color: #ffffff;            /* White text for good contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+  background-color: #014421; /* Slightly lighter dark green for header */
+  padding: 1rem;
+  color: white;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+select, input[type="number"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555;
+}
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#result {
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 0; /* Center it and add margin */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/* Toggle Switch Style */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.theme-switch .slider {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+}
+
+.theme-switch .slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 1px;
+  top: 1px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+#theme-toggle:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+#theme-toggle:checked + .slider {
+  background-color: #4caf50;
+}
+
+/* DARK MODE STYLES */
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark header,
+body.dark main {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark input,
+body.dark select,
+body.dark button {
+  background-color: #333;
+  color: #f5f5f5;
+  border: 1px solid #666;
+}
+
+body.dark #result {
+  color: #00ffcc;
+  background-color: #222;
+}
+body {
+  font-size: 14px; /* default was likely 16px */
+}
+
+h1, h2 {
+  font-size: 1.5rem; /* smaller headings */
+  margin-bottom: 0.5rem;
+}
+input, select, button {
+  font-size: 0.9rem;
+  padding: 6px 8px;
+  margin: 6px 0;
+}
+main {
+  padding: 1rem; /* was probably 2rem */
+}
+
+section {
+  margin-bottom: 0.75rem; /* reduce vertical spacing */
+}
+header {
+  padding: 0.75rem 1rem;
+}
+
+.header-content h1 {
+  font-size: 1.5rem;
+}
+#history {
+  font-size: 0.85rem;
+  padding-left: 0.75rem;
+}
+.logo {
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.result-container {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+#result {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #2e4e2e;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+#clear-button {
+  width: 30px;
+  height: 30px;
+  background-color: #445f44;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#clear-button:hover {
+  background-color: #5a7a5a;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px #2e7d32; /* 3D shadow effect */
+  transition: all 0.1s ease-in-out;
+}
+
+button:active {
+  box-shadow: 0 2px #2e7d32;
+  transform: translateY(2px); /* "Press" effect */
+}
